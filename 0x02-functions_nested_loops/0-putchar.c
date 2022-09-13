@@ -1,21 +1,27 @@
-#include "main.h"
+/*
+ * File: 0-putchar.c
+ * Auth: Jan Nelson
+ */
+
+#include <main.h>
 
 /**
-* main - Print the word "_putchar"
-*
-* Return: Always 0 (Success)
-*/
-
+ * main - Print the word "_putchar"
+ *
+ * Return: Always 0.
+ */
 int main(void)
 {
 	int i;
+
 	char p[] = "_putchar";
 
-	for (i = 0; i < 8; i++)
-		{
+	for ((i = 0; i < 8; i++)
+	{
 		_putchar(p[i]);
-		}
-		_putchar('\n');
-	
-    return (0);
+	}
+	    _putchar('\n');
+
+	return (0);
+
 }
