@@ -3,7 +3,7 @@
  * Auth: Jan Nelson
  */
 
-#include <main.h>
+#include "main.h"
 
 /**
  * main - Print the word "_putchar"
