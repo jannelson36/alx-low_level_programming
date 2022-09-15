@@ -1,4 +1,8 @@
-#include "main.h"
+/*
+ * File: 101-print_number.c
+ */
+
+#include "holberton.h"
 
 /**
  * print_number - Prints an integer.
