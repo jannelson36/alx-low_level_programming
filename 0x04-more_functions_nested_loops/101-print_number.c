@@ -2,7 +2,7 @@
  * File: 101-print_number.c
  */
 
-#include "holberton.h"
+#include "main.h"
 
 /**
  * print_number - Prints an integer.
