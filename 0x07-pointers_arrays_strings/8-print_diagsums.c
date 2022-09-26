@@ -3,7 +3,7 @@
  * Auth: Jan Nelson
  */
 
-#include "mainn.h"
+#include "main.h"
 #include <stdio.h>
 
 /**
