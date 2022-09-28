@@ -5,26 +5,26 @@
 
 #include "main.h"
 
-int _divisible(int num, int d);
+int is_divisible(int num, int div);
 int is_prime_number(int n);
 
 /**
- * _divisible - Checks if a number is divisible.
+ * is_divisible - Checks if a number is divisible.
  * @num: The number to be checked.
- * @d: The divisor.
+ * @div: The divisor.
  *
  * Return: If the number is divisible - 0.
  *         If the number is not divisible - 1.
  */
-int _divisible(int num, int d)
+int is_divisible(int num, int div)
 {
-	if (num % d == 0)
+	if (num % div == 0)
 		return (0);
 
-	if (d == num / 2)
+	if (div == num / 2)
 		return (1);
 
-	return (is_divisible(num, d + 1));
+	return (is_divisible(num, div + 1));
 }
 
 /**
@@ -36,7 +36,7 @@ int _divisible(int num, int d)
  */
 int is_prime_number(int n)
 {
-	int d = 2;
+	int div = 2;
 
 	if (n <= 1)
 		return (0);
@@ -44,5 +44,5 @@ int is_prime_number(int n)
 	if (n >= 2 && n <= 3)
 		return (1);
 
-	return (_divisible(n, d));
+	return (is_divisible(n, div));
 }
