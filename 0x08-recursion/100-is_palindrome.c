@@ -6,7 +6,7 @@
 #include "main.h"
 
 int find_strlen(char *s);
-int check_palindrome(char *s, int l, int index);
+int check_palindrome(char *s, int len, int index);
 int is_palindrome(char *s);
 
 /**
@@ -17,15 +17,15 @@ int is_palindrome(char *s);
  */
 int find_strlen(char *s)
 {
-	int l = 0;
+	int len = 0;
 
-	if (*(s + l))
+	if (*(s + len))
 	{
-		l++;
-		l += find_strlen(s + l);
+		len++;
+		len += find_strlen(s + len);
 	}
 
-	return (l);
+	return (len);
 }
 
 /**
@@ -37,13 +37,13 @@ int find_strlen(char *s)
  * Return: If the string is a palindrome - 1.
  *         If the string is not a palindrome - 0.
  */
-int check_palindrome(char *s, int l, int i)
+int check_palindrome(char *s, int len, int index)
 {
-	if (s[i] == s[l / 2])
+	if (s[index] == s[len / 2])
 		return (1);
 
-	if (s[i] == s[l - i - 1])
-		return (check_palindrome(s, l, i + 1));
+	if (s[index] == s[len - index - 1])
+		return (check_palindrome(s, len, index + 1));
 
 	return (0);
 }
@@ -57,11 +57,11 @@ int check_palindrome(char *s, int l, int i)
  */
 int is_palindrome(char *s)
 {
-	int i = 0;
-	int l = find_strlen(s);
+	int index = 0;
+	int len = find_strlen(s);
 
 	if (!(*s))
 		return (1);
 
-	return (check_palindrome(s, l, i));
+	return (check_palindrome(s, len, index));
 }
