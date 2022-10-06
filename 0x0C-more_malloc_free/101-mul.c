@@ -41,17 +41,17 @@ int find_len(char *str)
 char *create_xarray(int size)
 {
 	char *array;
-	int i;
+	int index;
 
 	array = malloc(sizeof(char) * size);
 
 	if (array == NULL)
 		exit(98);
 
-	for (i = 0; i < (size - 1); i++)
-		array[i] = 'x';
+	for (index = 0; index < (size - 1); index++)
+		array[index] = 'x';
 
-	array[i] = '\0';
+	array[index] = '\0';
 
 	return (array);
 }
@@ -195,7 +195,7 @@ void add_nums(char *final_prod, char *next_prod, int next_len)
 int main(int argc, char *argv[])
 {
 	char *final_prod, *next_prod;
-	int size, i, digit, zeroes = 0;
+	int size, index, digit, zeroes = 0;
 
 	if (argc != 3)
 	{
@@ -217,16 +217,16 @@ int main(int argc, char *argv[])
 	final_prod = create_xarray(size + 1);
 	next_prod = create_xarray(size + 1);
 
-	for (i = find_len(argv[2]) - 1; i >= 0; i--)
+	for (index = find_len(argv[2]) - 1; index >= 0; index--)
 	{
-		digit = get_digit(*(argv[2] + i));
+		digit = get_digit(*(argv[2] + index));
 		get_prod(next_prod, argv[1], digit, zeroes++);
 		add_nums(final_prod, next_prod, size - 1);
 	}
-	for (i = 0; final_prod[i]; i++)
+	for (index = 0; final_prod[index]; index++)
 	{
-		if (final_prod[i] != 'x')
-			putchar(final_prod[i]);
+		if (final_prod[index] != 'x')
+			putchar(final_prod[index]);
 	}
 	putchar('\n');
 
