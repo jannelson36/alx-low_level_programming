@@ -2,8 +2,9 @@
  * File: 0-print_name.c
  * Auth: Jan Nelson
  */
-
+#include"stdlib.h"
 #include "function_pointers.h"
+#include <stdio.h>
 
 /**
  * print_name - Prints a name.
@@ -13,8 +14,6 @@
 
 void print_name(char *name, void (*f)(char *))
 {
-	if (name == NULL || f == NULL)
-		return;
-
+	if (name != NULL && *name != '\0' && f != NULL)
 	f(name);
 }
