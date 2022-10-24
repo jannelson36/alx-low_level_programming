@@ -2,7 +2,6 @@
  * File: 0-print_list.c
  * Auth: Jan Nelson
  */
-
 #include <stdio.h>
 #include "lists.h"
 #include <stdlib.h>
