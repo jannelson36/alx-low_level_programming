@@ -59,3 +59,12 @@ functions written in the project.
 * **5. 101**
   * [5-flip_bits.c](./5-flip_bits.c): C function that returns the number of bits needed
   to be flipped to get from one number to another.
+
+* **6. Endianness**
+  * [100-get_endianness.c](./100-get_endianness.c): C function that checks the endianness.
+  * If big-endian - returns `0`.
+  * If little-endian - returns `1`.
+
+* **7. Crackme3**
+  * [101-password](./101-password): File containing the password for the
+  [crackme3](https://github.com/holbertonschool/0x13.c) executable.
